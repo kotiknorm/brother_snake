@@ -1,10 +1,10 @@
 package snake.app.first.com.brothersnake.gameplay.controllers;
 
 import snake.app.first.com.brothersnake.gameplay.Field;
-import snake.app.first.com.brothersnake.gameplay.FieldObject;
+import snake.app.first.com.brothersnake.gameplay.objects.FieldObject;
 
 /**
- * Created by Metrolog on 12.10.15.
+ * Контроллер для недвигающихся обьектов
  */
 public class EmptyControllerObject implements ObjectController {
 
@@ -34,7 +34,7 @@ public class EmptyControllerObject implements ObjectController {
     /**
      * Задаем местоположение
      */
-    private void changeLocation(int x, int y){
+    private void changeLocation(int x, int y) {
         mField.addObject(mFieldObject, x, y);
         mFieldObject.setX(x);
         mFieldObject.setY(y);

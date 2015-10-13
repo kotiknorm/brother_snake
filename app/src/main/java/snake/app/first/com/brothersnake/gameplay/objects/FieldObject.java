@@ -1,4 +1,4 @@
-package snake.app.first.com.brothersnake.gameplay;
+package snake.app.first.com.brothersnake.gameplay.objects;
 
 /**
  * обьект который может находиться на игровом поле

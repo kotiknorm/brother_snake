@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import snake.app.first.com.brothersnake.gameplay.exceptions.DuplicateObjectException;
 import snake.app.first.com.brothersnake.gameplay.exceptions.NotFoundObjectException;
+import snake.app.first.com.brothersnake.gameplay.objects.FieldObject;
 
 /**
  * Игровое поле

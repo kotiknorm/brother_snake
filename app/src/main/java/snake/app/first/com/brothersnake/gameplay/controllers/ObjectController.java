@@ -1,6 +1,6 @@
 package snake.app.first.com.brothersnake.gameplay.controllers;
 
-import snake.app.first.com.brothersnake.gameplay.FieldObject;
+import snake.app.first.com.brothersnake.gameplay.objects.FieldObject;
 
 /**
  * Контроллер который управляет обьектом на поле
