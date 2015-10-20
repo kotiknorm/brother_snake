@@ -4,10 +4,10 @@ import java.util.Collection;
 
 import snake.app.first.com.brothersnake.gameplay.collision.Collision;
 import snake.app.first.com.brothersnake.gameplay.controllers.ObjectController;
-import snake.app.first.com.brothersnake.gameplay.views.View;
 
 /**
- * Класс в котором прртекает весь игровой процесс
+ * Поток
+ * Класс в котором прртекает весь игровой процесс, изменение обьектов
  */
 public class GameProcess {
 
@@ -19,7 +19,7 @@ public class GameProcess {
      */
     private Collection<Collision> mCollisions;
 
-    private Collection<View> mViews;
+
     private GameEngine mGameEngine;
     private GameConfig mGameConfig;
 
@@ -56,7 +56,6 @@ public class GameProcess {
      * Имеется ввиду FieldObject так как они будут и в View и в Controller
      */
     public void next(){
-        nextDraw();                 // Первый поток UI-Thread
         nextIterControllers();      // Второй поток
     }
 
@@ -69,14 +68,6 @@ public class GameProcess {
         }
     }
 
-    /**
-     * Обновляет все элементы на экрвне
-     */
-    private synchronized void nextDraw(){
-        for(View view : mViews){
-            view.onDraw();
-        }
-    }
 
     /**
      * Добавить новый контроллер в игровой процесс
@@ -86,11 +77,5 @@ public class GameProcess {
         mControllers.add(controller);
     }
 
-    /**
-     * Добавить новый вью
-     * @param view
-     */
-    public void addView(View view){
-        mViews.add(view);
-    }
+
 }
